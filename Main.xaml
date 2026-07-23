@@ -1,0 +1,647 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugae="clr-namespace:UiPath.GSuite.Activities.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upap="clr-namespace:UiPath.PDF.Activities.PDF;assembly=UiPath.PDF.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>Microsoft.Office.Interop.Word</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>UiPath.GSuite.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Contracts</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.PDF.Activities.PDF</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main - Invoice Processing (Gmail IMAP + File Classifier)" sap:VirtualizedContainerService.HintSize="590.4,7516" sap2010:WorkflowViewState.IdRef="Sequence_Main">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="imapServer" />
+      <Variable x:TypeArguments="x:Int32" Name="imapPort" />
+      <Variable x:TypeArguments="x:String" Name="mailFolder" />
+      <Variable x:TypeArguments="x:String" Name="gmailAddress" />
+      <Variable x:TypeArguments="x:String" Name="gmailAppPassword" />
+      <Variable x:TypeArguments="x:String" Name="attachmentFolder" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="fileList" />
+      <Variable x:TypeArguments="x:String" Name="fileExtension" />
+      <Variable x:TypeArguments="x:Object" Name="mailMessages" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtConfig" />
+      <Variable x:TypeArguments="ugm:GmailMessage[]" Name="eMails" />
+      <Variable x:TypeArguments="x:String" Name="client_id_gmail" />
+      <Variable x:TypeArguments="x:String" Name="client_secret_gmail" />
+      <Variable x:TypeArguments="x:String" Name="jsonMail" />
+      <Variable x:TypeArguments="x:String" Name="EmailFolderInbox" />
+      <Variable x:TypeArguments="x:String" Name="EmailFolderProcessed" />
+      <Variable x:TypeArguments="x:String" Name="EmailFolderNeedReview" />
+      <Variable x:TypeArguments="x:String" Name="AttachmentDownloadPath" />
+      <Variable x:TypeArguments="x:String" Name="AllowedExtensions" />
+      <Variable x:TypeArguments="x:String" Name="MasterOutputPath" />
+      <Variable x:TypeArguments="x:String" Name="DataQualityLogPath" />
+      <Variable x:TypeArguments="x:String" Name="OCRConfidenceThreshold" />
+      <Variable x:TypeArguments="x:String" Name="NotificationEmailTo" />
+      <Variable x:TypeArguments="x:String" Name="DocumentUnderstandingProjectId" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="GetConfig" sap:VirtualizedContainerService.HintSize="590.4,1008" sap2010:WorkflowViewState.IdRef="Sequence_17">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadRange AddHeaders="True" DataTable="[dtConfig]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,226.4" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Settings" WorkbookPath="E:\NONFORMAL\RPA\uipath_invoice_processing\uipath_invoice_processing\Config\Config.xlsx">
+        <ui:ReadRange.Range>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </ui:ReadRange.Range>
+      </ui:ReadRange>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,524" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[jsonMail]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[System.IO.File.ReadAllText("E:\NONFORMAL\RPA\uipath_invoice_processing\uipath_invoice_processing\Config\client_Mail.json")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[client_id_gmail]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(jsonMail,"""client_secret""\s*:\s*""([^""]+)""").Groups(1).Value]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[client_secret_gmail]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(jsonMail,"""client_secret""\s*:\s*""([^""]+)""").Groups(1).Value]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[EmailFolderInbox]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(0)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[EmailFolderProcessed]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(1)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[EmailFolderNeedReview]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(2)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[AttachmentDownloadPath]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(3)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[AllowedExtensions]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(4)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[MasterOutputPath]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "Output", "invoice_tracking_master.xlsx")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[DataQualityLogPath]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(6)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[OCRConfidenceThreshold]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(7)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[NotificationEmailTo]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(8)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[DocumentUnderstandingProjectId]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[dtConfig.Rows(9)(1).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:MultipleAssign>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;AttachmentDownloadPath adalah &quot;+AttachmentDownloadPath]" />
+    </Sequence>
+    <Sequence DisplayName="DownloadMailAttachment" sap:VirtualizedContainerService.HintSize="590.4,1038.4" sap2010:WorkflowViewState.IdRef="Sequence_53">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="variable2" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uga:GSuiteApplicationScope ApiKey="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" BucketId="{x:Null}" BucketName="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" Account="sekolaonlen1@gmail.com" AuthenticationType="OAuthClientID" BucketInputMode="Browse" ConfigLocation="PropertiesPanel" CredentialID="[client_id_gmail]" CredentialSecret="[client_secret_gmail]" DataStoreLocation="DISK" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="486.4,946.4" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="UIPATH" Password="notasecret" RuntimeItemInputMode="Browse" Services="Unselected" UseConnectionService="False" User="D41D8CD9">
+        <uga:GSuiteApplicationScope.AuthenticationScopes>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+        </uga:GSuiteApplicationScope.AuthenticationScopes>
+        <uga:GSuiteApplicationScope.AuthenticationTypeBackup>
+          <usau:BackupSlot x:TypeArguments="ugae:GoogleAuthenticationType" StoredValue="{x:Null}">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugae:GoogleAuthenticationType, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:GSuiteApplicationScope.AuthenticationTypeBackup>
+        <uga:GSuiteApplicationScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="GSuiteScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,720" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Int32" Name="mail" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uga:GetMailMessages ContinueOnError="{x:Null}" EmailId="{x:Null}" AuthScopesInvalid="False" DisplayName="Get Mail Messages" sap:VirtualizedContainerService.HintSize="451.2,138.4" sap2010:WorkflowViewState.IdRef="GetMailMessages_2" MarkAsRead="False" MaxResults="10" Result="[eMails]" SearchExpression="label:Inbox subject:invoice has:attachment newer_than:30d is:unread">
+                <uga:GetMailMessages.Labels>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </uga:GetMailMessages.Labels>
+              </uga:GetMailMessages>
+              <ui:ForEach x:TypeArguments="ugm:GmailMessage" CurrentIndex="[mail]" DisplayName="For Each mail" sap:VirtualizedContainerService.HintSize="451.2,521.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[eMails]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="ugm:GmailMessage">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ugm:GmailMessage" Name="mail" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:SaveMailAttachments Attachments="{x:Null}" ResourceAttachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="False" Filter="[fileExtension]" FolderPath="[AttachmentDownloadPath]" sap:VirtualizedContainerService.HintSize="416,226.4" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_2" Message="[mail]" OverwriteExisting="True" />
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[mail.Body]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+              </ui:ForEach>
+            </Sequence>
+          </ActivityAction>
+        </uga:GSuiteApplicationScope.Body>
+        <uga:GSuiteApplicationScope.BucketFullPathBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:GSuiteApplicationScope.BucketFullPathBackup>
+        <uga:GSuiteApplicationScope.RuntimeItemFullPathBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="{x:Null}">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:GSuiteApplicationScope.RuntimeItemFullPathBackup>
+      </uga:GSuiteApplicationScope>
+    </Sequence>
+    <Sequence DisplayName="FormatClassification" sap:VirtualizedContainerService.HintSize="590.4,5280.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Get All Files In Attachment Folder" sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:String)">[fileList]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:String)">[System.IO.Directory.GetFiles(AttachmentDownloadPath).ToList]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log - Total File Ditemukan" sap:VirtualizedContainerService.HintSize="556.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Total file ditemukan di folder: &quot; + fileList.Count.ToString]" />
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Invoice File" sap:VirtualizedContainerService.HintSize="556.8,4840" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[fileList]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentFile" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Process One File" sap:VirtualizedContainerService.HintSize="555.2,4718.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Get File Extension" sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[fileExtension]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.IO.Path.GetExtension(currentFile).ToLower]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:IfElseIfV2 Condition="[fileExtension = &quot;.pdf&quot; Or fileExtension = &quot;.jpg&quot; Or fileExtension = &quot;.jpeg&quot; Or fileExtension = &quot;.png&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="521.6,4484" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
+                <ui:IfElseIfV2.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="520,225.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log - Format Tidak Dikenali" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Warn" Message="[currentFile + &quot; -&gt; format file tidak dikenali, lewati / tandai Need Review&quot;]" />
+                  </Sequence>
+                </ui:IfElseIfV2.Else>
+                <ui:IfElseIfV2.ElseIfs>
+                  <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                    <ui:IfElseIfBlock BlockType="ElseIf" Condition="[fileExtension = &quot;.xlsx&quot; Or fileExtension = &quot;.xls&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
+                      <ui:IfElseIfBlock.Then>
+                        <Sequence DisplayName="Cek Apakah Excel" sap:VirtualizedContainerService.HintSize="520,1668" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="cleanStatus" />
+                            <Variable x:TypeArguments="x:Int64" Name="cleanTotal" />
+                            <Variable x:TypeArguments="x:Int64" Name="cleanQty" />
+                            <Variable x:TypeArguments="x:Int64" Name="cleanHarga" />
+                            <Variable x:TypeArguments="x:String" Name="cleanDeskripsi" />
+                            <Variable x:TypeArguments="x:String" Name="cleanCustomer" />
+                            <Variable x:TypeArguments="x:String" Name="cleanTanggal" />
+                            <Variable x:TypeArguments="x:String" Name="cleanNoInv" />
+                            <Variable x:TypeArguments="sd:DataTable" Name="resultExcel" />
+                            <Variable x:TypeArguments="sd:DataTable" Name="invoiceTable" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log - Route Ke Excel" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[currentFile + &quot; -&gt; akan diproses via Read Range Excel (data tabular)&quot;]" />
+                          <ui:ReadRange AddHeaders="True" DataTable="[resultExcel]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="486.4,226.4" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Invoice Batch" WorkbookPathResource="[LocalResource.FromPath(currentFile)]">
+                            <ui:ReadRange.Range>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </ui:ReadRange.Range>
+                          </ui:ReadRange>
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[resultExcel]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="486.4,1041.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow.Body>
+                              <ActivityAction x:TypeArguments="sd:DataRow">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,860" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[Not String.IsNullOrWhiteSpace(currentRow(&quot;No Invoice&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="451.2,800" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,444.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;    ' ── No Invoice: uppercase + trim ──&#xA;    outNoInv = rawNoInv.Trim.ToUpper&#xA;&#xA;&#x9;' Bersihkan suffix waktu kalau ada (misal &quot;06/07/2026 00:00:00&quot; → &quot;06/07/2026&quot;)&#xA;&#x9;' Ambil tanggal, buang suffix waktu kalau ada&#xA;Dim tgl As String = rawTanggal.Trim&#xA;If tgl.Contains(&quot; &quot;) Then tgl = tgl.Split(New Char(){Convert.ToChar(32)})(0).Trim&#xA;&#xA;' Standarkan ke dd/mm/yyyy&#xA;Dim mYMD = System.Text.RegularExpressions.Regex.Match(tgl, &quot;^(\d{4})-(\d{2})-(\d{2})$&quot;)&#xA;Dim mDMY = System.Text.RegularExpressions.Regex.Match(tgl, &quot;^(\d{2})-(\d{2})-(\d{4})$&quot;)&#xA;Dim mSlash = System.Text.RegularExpressions.Regex.Match(tgl, &quot;^(\d{2})/(\d{2})/(\d{4})$&quot;)&#xA;If mYMD.Success Then&#xA;    outTanggal = mYMD.Groups(3).Value &amp; &quot;/&quot; &amp; mYMD.Groups(2).Value &amp; &quot;/&quot; &amp; mYMD.Groups(1).Value&#xA;ElseIf mDMY.Success Then&#xA;    outTanggal = mDMY.Groups(1).Value &amp; &quot;/&quot; &amp; mDMY.Groups(2).Value &amp; &quot;/&quot; &amp; mDMY.Groups(3).Value&#xA;ElseIf mSlash.Success Then&#xA;    outTanggal = tgl&#xA;Else&#xA;    outTanggal = tgl&#xA;End If&#xA;&#xA;    ' ── Customer: PT tetap uppercase, kata lain capitalize ──&#xA;    Dim custWords = rawCustomer.Trim.Split(New Char(){Convert.ToChar(32)}, StringSplitOptions.RemoveEmptyEntries)&#xA;    Dim custResult As New System.Text.StringBuilder()&#xA;    For Each w As String In custWords&#xA;        If custResult.Length &gt; 0 Then custResult.Append(&quot; &quot;)&#xA;        If w.ToUpper = &quot;PT&quot; OrElse w.ToUpper = &quot;CV&quot; OrElse w.ToUpper = &quot;TBK&quot; Then&#xA;            custResult.Append(w.ToUpper)&#xA;        Else&#xA;            custResult.Append(w.Substring(0,1).ToUpper &amp; If(w.Length &gt; 1, w.Substring(1).ToLower, &quot;&quot;))&#xA;        End If&#xA;    Next&#xA;    outCustomer = custResult.ToString.Trim&#xA;&#xA;    ' ── Deskripsi: hilangkan spasi berlebih ──&#xA;    outDeskripsi = System.Text.RegularExpressions.Regex.Replace(rawDeskripsi.Trim, &quot;\s+&quot;, &quot; &quot;)&#xA;&#xA;    ' ── Harga: bersihkan Rp, titik/koma ribuan → integer ──&#xA;    Dim hargaStr = System.Text.RegularExpressions.Regex.Replace(rawHarga.Trim, &quot;(?i)^(rp\.?|idr)\s*&quot;, &quot;&quot;)&#xA;    hargaStr = hargaStr.Replace(&quot;.&quot;, &quot;&quot;).Replace(&quot;,&quot;, &quot;&quot;).Replace(&quot; &quot;, &quot;&quot;)&#xA;    Dim hargaVal As Int64 = 0&#xA;    Int64.TryParse(hargaStr, hargaVal)&#xA;    outHarga = hargaVal&#xA;&#xA;    ' ── Qty → integer ──&#xA;    Dim qtyVal As Int64 = 0&#xA;    Int64.TryParse(rawQty.Trim, qtyVal)&#xA;    outQty = qtyVal&#xA;&#xA;    ' ── Total = Qty x Harga ──&#xA;    outTotal = outQty * outHarga&#xA;&#xA;    ' ── Status: trim saja ──&#xA;    outStatus = rawStatus.Trim&#xA;&#xA;    Console.WriteLine(&quot;OK: &quot; &amp; outNoInv &amp; &quot; | &quot; &amp; outTanggal &amp; &quot; | &quot; &amp; outCustomer &amp; &quot; | Total: &quot; &amp; outTotal.ToString)&#xA;&#xA;Catch ex As Exception&#xA;    Console.WriteLine(&quot;ERROR cleaning baris: &quot; &amp; ex.Message)&#xA;    outNoInv = rawNoInv&#xA;    outTanggal = rawTanggal&#xA;    outCustomer = rawCustomer&#xA;    outDeskripsi = rawDeskripsi&#xA;    outHarga = 0&#xA;    outQty = 0&#xA;    outTotal = 0&#xA;    outStatus = rawStatus&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_6">
+                                          <ui:InvokeCode.Arguments>
+                                            <InArgument x:TypeArguments="x:String" x:Key="rawNoInv">[currentRow("No Invoice").ToString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="rawTanggal">[currentRow("Tanggal").ToString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="rawCustomer">[currentRow("Nama Customer").ToString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="rawDeskripsi">[currentRow("Deskripsi Jasa/Barang").ToString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="rawQty">[currentRow("Qty").ToString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="rawHarga">[currentRow("Harga Satuan").ToString]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="rawStatus">[currentRow("Status").ToString]</InArgument>
+                                            <OutArgument x:TypeArguments="x:String" x:Key="outNoInv">[cleanNoInv]</OutArgument>
+                                            <OutArgument x:TypeArguments="x:String" x:Key="outTanggal">[cleanTanggal]</OutArgument>
+                                            <OutArgument x:TypeArguments="x:String" x:Key="outCustomer">[cleanCustomer]</OutArgument>
+                                            <OutArgument x:TypeArguments="x:String" x:Key="outDeskripsi">[cleanDeskripsi]</OutArgument>
+                                            <OutArgument x:TypeArguments="x:Int64" x:Key="outHarga">[cleanHarga]</OutArgument>
+                                            <OutArgument x:TypeArguments="x:Int64" x:Key="outQty">[cleanQty]</OutArgument>
+                                            <OutArgument x:TypeArguments="x:Int64" x:Key="outTotal">[cleanTotal]</OutArgument>
+                                            <OutArgument x:TypeArguments="x:String" x:Key="outStatus">[cleanStatus]</OutArgument>
+                                          </ui:InvokeCode.Arguments>
+                                        </ui:InvokeCode>
+                                        <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;    Dim workbook As NPOI.XSSF.UserModel.XSSFWorkbook&#xA;    Dim sheet As NPOI.SS.UserModel.ISheet&#xA;&#xA;    ' ── BACA file existing (kalau ada) ──&#xA;    If System.IO.File.Exists(xlsxPath) Then&#xA;        Dim fileBytes As Byte() = System.IO.File.ReadAllBytes(xlsxPath)&#xA;        Using ms As New System.IO.MemoryStream(fileBytes)&#xA;            workbook = New NPOI.XSSF.UserModel.XSSFWorkbook(ms)&#xA;        End Using&#xA;        sheet = workbook.GetSheet(&quot;Invoice&quot;)&#xA;        If sheet Is Nothing Then&#xA;            sheet = workbook.CreateSheet(&quot;Invoice&quot;)&#xA;        End If&#xA;    Else&#xA;        ' ── BUAT file baru kalau belum ada ──&#xA;        System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(xlsxPath))&#xA;        workbook = New NPOI.XSSF.UserModel.XSSFWorkbook()&#xA;        sheet = workbook.CreateSheet(&quot;Invoice Tracking&quot;)&#xA;&#xA;        ' Buat header baris pertama&#xA;        Dim hr = sheet.CreateRow(0)&#xA;        Dim hs = workbook.CreateCellStyle()&#xA;        Dim hf = workbook.CreateFont()&#xA;        hf.IsBold = True&#xA;        hf.Color = NPOI.HSSF.Util.HSSFColor.White.Index&#xA;        hs.SetFont(hf)&#xA;        hs.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.DarkBlue.Index&#xA;        hs.FillPattern = NPOI.SS.UserModel.FillPattern.SolidForeground&#xA;        Dim headers() As String = {&quot;No Invoice&quot;,&quot;Tanggal&quot;,&quot;Nama Customer&quot;,&quot;Deskripsi&quot;,&quot;Qty&quot;,&quot;Harga Satuan&quot;,&quot;Total&quot;,&quot;Status&quot;}&#xA;        For i As Integer = 0 To headers.Length - 1&#xA;            Dim c = hr.CreateCell(i)&#xA;            c.SetCellValue(headers(i))&#xA;            c.CellStyle = hs&#xA;        Next&#xA;    End If&#xA;&#xA;    ' ── TAMBAH baris baru (append setelah baris terakhir) ──&#xA;    Dim lastRow As Integer = sheet.LastRowNum&#xA;    Dim nr = sheet.CreateRow(lastRow + 1)&#xA;&#xA;    nr.CreateCell(0).SetCellValue(noInv)&#xA;    nr.CreateCell(1).SetCellValue(tanggal)&#xA;    nr.CreateCell(2).SetCellValue(customer)&#xA;    nr.CreateCell(3).SetCellValue(deskripsi)&#xA;    nr.CreateCell(4).SetCellValue(CDbl(qty))&#xA;    nr.CreateCell(5).SetCellValue(CDbl(harga))&#xA;    nr.CreateCell(6).SetCellValue(CDbl(total))&#xA;    nr.CreateCell(7).SetCellValue(status)&#xA;&#xA;    ' Style merah untuk sel kosong&#xA;    Dim redStyle = workbook.CreateCellStyle()&#xA;    redStyle.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Red.Index&#xA;    redStyle.FillPattern = NPOI.SS.UserModel.FillPattern.SolidForeground&#xA;&#xA;    ' Style kuning untuk baris bermasalah&#xA;    Dim yellowStyle = workbook.CreateCellStyle()&#xA;    yellowStyle.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Yellow.Index&#xA;    yellowStyle.FillPattern = NPOI.SS.UserModel.FillPattern.SolidForeground&#xA;&#xA;    Dim hasIssue As Boolean = String.IsNullOrWhiteSpace(noInv) OrElse String.IsNullOrWhiteSpace(status) OrElse String.IsNullOrWhiteSpace(tanggal)&#xA;&#xA;    For col As Integer = 0 To 7&#xA;        Dim cell = nr.GetCell(col)&#xA;        If cell Is Nothing Then Continue For&#xA;        If col = 0 AndAlso String.IsNullOrWhiteSpace(noInv) Then&#xA;            cell.CellStyle = redStyle&#xA;        ElseIf col = 7 AndAlso String.IsNullOrWhiteSpace(status) Then&#xA;            cell.CellStyle = redStyle&#xA;        ElseIf hasIssue Then&#xA;            cell.CellStyle = yellowStyle&#xA;        End If&#xA;    Next&#xA;&#xA;    ' Auto-size kolom&#xA;    For i As Integer = 0 To 7&#xA;        sheet.AutoSizeColumn(i)&#xA;    Next&#xA;&#xA;    ' ── TULIS kembali ke file (bukan FileStream lama) ──&#xA;    Using fs As New System.IO.FileStream(xlsxPath, System.IO.FileMode.Create, System.IO.FileAccess.Write)&#xA;        workbook.Write(fs)&#xA;    End Using&#xA;&#xA;    Console.WriteLine(&quot;Append OK: &quot; &amp; noInv &amp; &quot; | Row ke-&quot; &amp; (lastRow + 1).ToString)&#xA;&#xA;Catch ex As Exception&#xA;    Console.WriteLine(&quot;ERROR tulis Excel: &quot; &amp; ex.Message)&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_7">
+                                          <ui:InvokeCode.Arguments>
+                                            <InArgument x:TypeArguments="x:String" x:Key="xlsxPath">[MasterOutputPath]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="noInv">[cleanNoInv]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="tanggal">[cleanTanggal]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="customer">[cleanCustomer]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="deskripsi">[cleanDeskripsi]</InArgument>
+                                            <InArgument x:TypeArguments="x:Int64" x:Key="qty">[cleanQty]</InArgument>
+                                            <InArgument x:TypeArguments="x:Int64" x:Key="harga">[cleanHarga]</InArgument>
+                                            <InArgument x:TypeArguments="x:Int64" x:Key="total">[cleanTotal]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="status">[cleanStatus]</InArgument>
+                                          </ui:InvokeCode.Arguments>
+                                        </ui:InvokeCode>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn" Message="[&quot;Baris dilewati - No Invoice kosong&quot;]" />
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEachRow.Body>
+                          </ui:ForEachRow>
+                          <ui:LogMessage DisplayName="Log - Total File Ditemukan" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Total row  resultExcel  excel: &quot; +resultExcel.Rows.Count.ToString]" />
+                        </Sequence>
+                      </ui:IfElseIfBlock.Then>
+                    </ui:IfElseIfBlock>
+                  </sc:BindingList>
+                </ui:IfElseIfV2.ElseIfs>
+                <ui:IfElseIfV2.Then>
+                  <Sequence DisplayName="Cek Apakah IMG/PDF" sap:VirtualizedContainerService.HintSize="520,2373.6" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="invLineItems" />
+                      <Variable x:TypeArguments="x:String" Name="invoiceTotalStr" />
+                      <Variable x:TypeArguments="x:String" Name="invoiceJatuhTempo" />
+                      <Variable x:TypeArguments="x:String" Name="invoiceCustomer" />
+                      <Variable x:TypeArguments="x:String" Name="invoiceVendor" />
+                      <Variable x:TypeArguments="x:String" Name="invoiceTanggal" />
+                      <Variable x:TypeArguments="x:String" Name="invoiceNumber" />
+                      <Variable x:TypeArguments="x:String" Name="extractedText" />
+                      <Variable x:TypeArguments="x:String" Name="PDF_Output_Orig" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log - Route Ke OCR" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[currentFile + &quot; -&gt; akan diproses via OCR / Document Understanding (PDF/gambar)&quot;]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:LogMessage>
+                    <ui:ReadPDFText PreserveFormatting="{x:Null}" ResourceFile="{x:Null}" DisplayName="Read PDF Text" FileName="[currentFile]" sap:VirtualizedContainerService.HintSize="486.4,123.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[extractedText]">
+                      <ui:ReadPDFText.Item>
+                        <upap:ItemArgument x:TypeArguments="upr:IResource" ResourceFile="{x:Null}" FileName="[currentFile]" />
+                      </ui:ReadPDFText.Item>
+                    </ui:ReadPDFText>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;extractedText length: &quot; &amp; If(extractedText Is Nothing, &quot;NULL&quot;, extractedText.Length.ToString) &amp; &quot; | preview: &quot; &amp; If(extractedText Is Nothing, &quot;NULL&quot;, extractedText.Substring(0, Math.Min(100, extractedText.Length)))]" />
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim stopWords As String() = New String() {&quot;Jl.&quot;, &quot;Jln.&quot;, &quot;Jl &quot;, &quot;Jalan&quot;, &quot;Telp&quot;, &quot;NPWP&quot;, &quot;Ditagihkan&quot;, &quot;No.&quot;, &quot;Tanggal&quot;, &quot;Tel&quot;, &quot;Fax&quot;, &quot;Email&quot;, &quot;Website&quot;}&#xA;Dim lines As String() = rawText.Split(New Char() {Convert.ToChar(10), Convert.ToChar(13)}, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim vendorLines As New System.Text.StringBuilder()&#xA;Dim started As Boolean = False&#xA;&#xA;For Each line As String In lines&#xA;    Dim t As String = line.Trim&#xA;    If t.StartsWith(&quot;PT&quot;) AndAlso Not started Then&#xA;        started = True&#xA;    End If&#xA;    If Not started Then Continue For&#xA;    Dim isStop As Boolean = False&#xA;    For Each sw As String In stopWords&#xA;        If t.StartsWith(sw) Then&#xA;            isStop = True&#xA;            Exit For&#xA;        End If&#xA;    Next&#xA;    If isStop Then Exit For&#xA;    vendorLines.Append(If(vendorLines.Length &gt; 0, &quot; &quot;, &quot;&quot;) &amp; t)&#xA;Next&#xA;&#xA;vendorName = vendorLines.ToString().Trim" DisplayName="Get InvoiceVendor" sap:VirtualizedContainerService.HintSize="486.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
+                      <ui:InvokeCode.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="rawText">[extractedText]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="vendorName">[invoiceVendor]</OutArgument>
+                      </ui:InvokeCode.Arguments>
+                    </ui:InvokeCode>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.4,336" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[invoiceCustomer]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Match(
+  If(extractedText,""),
+  "Ditagihkan kepada:\s*(PT[\w\s]+?)(?=Jl\.|No\.|Up:|$)",
+  System.Text.RegularExpressions.RegexOptions.Singleline
+).Groups(1).Value.Trim]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[invoiceNumber]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Match(
+  If(extractedText,""),
+  "No\.\s*Invoice\s*[:\|]\s*(INV[\w/\-]+)"
+).Groups(1).Value.Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[invoiceTanggal]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Match(
+  If(extractedText,""),
+  "Tanggal\s*[:\|]\s*(.+?)(?=Jatuh|$)",
+  System.Text.RegularExpressions.RegexOptions.Multiline
+).Groups(1).Value.Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[invoiceJatuhTempo]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Match(
+  If(extractedText,""),
+  "Jatuh Tempo\s*[:\|]\s*(.+?)(?=Termin|$)",
+  System.Text.RegularExpressions.RegexOptions.Multiline
+).Groups(1).Value.Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[invoiceTotalStr]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Text.RegularExpressions.Regex.Match(
+  If(extractedText,""),
+  "TOTAL TAGIHAN\s+([\d,\.]+)"
+).Groups(1).Value.Replace(",","").Replace(".","").Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;&#x9;Console.WriteLine(&quot;=== ISI pdfText ===&quot;)&#xA;&#x9;Console.WriteLine(If(pdfText Is Nothing, &quot;NULL / NOTHING&quot;, pdfText))&#xA;&#x9;Console.WriteLine(&quot;=== PANJANG: &quot; &amp; If(pdfText Is Nothing, &quot;NULL&quot;, pdfText.Length.ToString) &amp; &quot; karakter ===&quot;)&#xA;    Dim lines As String() = pdfText.Split(New Char() {Convert.ToChar(10), Convert.ToChar(13)}, StringSplitOptions.RemoveEmptyEntries)&#xA;    Dim normalized As New System.Text.StringBuilder()&#xA;    For Each line As String In lines&#xA;        Dim t As String = line.Trim&#xA;        If System.Text.RegularExpressions.Regex.IsMatch(t, &quot;^\d+\s+\S&quot;) Then&#xA;            normalized.AppendLine(t)&#xA;        ElseIf normalized.Length &gt; 0 AndAlso t.Length &gt; 0 Then&#xA;            normalized.Remove(normalized.Length - 2, 2)&#xA;            normalized.Append(&quot; &quot; &amp; t &amp; System.Environment.NewLine)&#xA;        End If&#xA;    Next&#xA;    Dim cleanText As String = normalized.ToString()&#xA;    Dim pattern As String = &quot;(\d+)\s+(.+?)\s+(\d+)\s+(Unit|Pcs|Set|Kg|Ltr|Buah|Meter|Rol|Box|Ls)\s+([\d,\.]+)\s+([\d,\.]+)&quot;&#xA;    Dim matches As System.Text.RegularExpressions.MatchCollection = System.Text.RegularExpressions.Regex.Matches(cleanText, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase)&#xA;    Dim dt As New System.Data.DataTable()&#xA;    dt.Columns.Add(&quot;No Invoice&quot;, GetType(String))&#xA;    dt.Columns.Add(&quot;Tanggal&quot;, GetType(String))&#xA;    dt.Columns.Add(&quot;Vendor&quot;, GetType(String))&#xA;    dt.Columns.Add(&quot;Deskripsi&quot;, GetType(String))&#xA;    dt.Columns.Add(&quot;Qty&quot;, GetType(String))&#xA;    dt.Columns.Add(&quot;Harga Satuan&quot;, GetType(String))&#xA;    dt.Columns.Add(&quot;Total&quot;, GetType(String))&#xA;    dt.Columns.Add(&quot;Status&quot;, GetType(String))&#xA;    For Each m As System.Text.RegularExpressions.Match In matches&#xA;        Dim desk As String = m.Groups(2).Value.Trim&#xA;        Dim qty As String = m.Groups(3).Value.Trim&#xA;        Dim harga As String = m.Groups(5).Value.Replace(&quot;,&quot;, &quot;&quot;).Replace(&quot;.&quot;, &quot;&quot;).Trim&#xA;        Dim total As String = m.Groups(6).Value.Replace(&quot;,&quot;, &quot;&quot;).Replace(&quot;.&quot;, &quot;&quot;).Trim&#xA;        If desk.ToLower &lt;&gt; &quot;deskripsi&quot; Then&#xA;            dt.Rows.Add(noInvoice, tanggal, vendor, desk, qty, harga, total, &quot;Belum Bayar&quot;)&#xA;        End If&#xA;    Next&#xA;    lineItems = dt&#xA;    Console.WriteLine(&quot;Parsing selesai. Total item: &quot; &amp; dt.Rows.Count.ToString)&#xA;Catch ex As Exception&#xA;    Console.WriteLine(&quot;ERROR: &quot; &amp; ex.Message)&#xA;    lineItems = New System.Data.DataTable()&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="486.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+                      <ui:InvokeCode.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="pdfText">[extractedText]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="noInvoice">[invoiceNumber]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="tanggal">[invoiceTanggal]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="vendor">[invoiceVendor]</InArgument>
+                        <OutArgument x:TypeArguments="sd:DataTable" x:Key="lineItems">[invLineItems]</OutArgument>
+                      </ui:InvokeCode.Arguments>
+                    </ui:InvokeCode>
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="For Each row As System.Data.DataRow In rows.Rows&#xA;    Console.WriteLine(&#xA;        row(&quot;No Invoice&quot;).ToString &amp; &quot; | &quot; &amp;&#xA;        row(&quot;Deskripsi&quot;).ToString &amp; &quot; | &quot; &amp;&#xA;        &quot;Qty: &quot; &amp; row(&quot;Qty&quot;).ToString &amp; &quot; &quot; &amp; &#xA;        &quot;Harga: &quot; &amp; row(&quot;Harga Satuan&quot;).ToString &amp; &quot; | &quot; &amp;&#xA;        &quot;Total: &quot; &amp; row(&quot;Total&quot;).ToString&#xA;    )&#xA;Next&#xA;Console.WriteLine(&quot;Total baris item: &quot; &amp; rows.Rows.Count.ToString)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="486.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+                      <ui:InvokeCode.Arguments>
+                        <InArgument x:TypeArguments="sd:DataTable" x:Key="rows">[invLineItems]</InArgument>
+                      </ui:InvokeCode.Arguments>
+                    </ui:InvokeCode>
+                    <ui:AppendRange DataTable="[invLineItems]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="486.4,217.6" sap2010:WorkflowViewState.IdRef="AppendRange_2" SheetName="Invoice" WorkbookPathResource="[LocalResource.FromPath(&quot;E:\NONFORMAL\RPA\uipath_invoice_processing\uipath_invoice_processing\Output\invoice_tracking_master.xlsx&quot;)]" />
+                  </Sequence>
+                </ui:IfElseIfV2.Then>
+              </ui:IfElseIfV2>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log - Selesai" sap:VirtualizedContainerService.HintSize="590.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_Done" Level="Info" Message="[&quot;Proses ambil email Gmail dan klasifikasi file invoice selesai.&quot;]" />
+  </Sequence>
+</Activity>
