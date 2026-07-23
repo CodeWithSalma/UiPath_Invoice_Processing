@@ -506,7 +506,7 @@
                               </ActivityAction>
                             </ui:ForEachRow.Body>
                           </ui:ForEachRow>
-                          <ui:LogMessage DisplayName="Log - Total File Ditemukan" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Total row  resultExcel  excel: &quot; +resultExcel.Rows.Count.ToString]" />
+                          <ui:LogMessage DisplayName="Log - Total File Ditemukan" sap:VirtualizedContainerService.HintSize="486.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Total row  excel: &quot; +resultExcel.Rows.Count.ToString]" />
                         </Sequence>
                       </ui:IfElseIfBlock.Then>
                     </ui:IfElseIfBlock>
