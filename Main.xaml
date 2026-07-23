@@ -123,7 +123,7 @@
       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main - Invoice Processing (Gmail IMAP + File Classifier)" sap:VirtualizedContainerService.HintSize="590.4,7516" sap2010:WorkflowViewState.IdRef="Sequence_Main">
+  <Sequence DisplayName="Main - Invoice Processing (Gmail IMAP + File Classifier)" sap:VirtualizedContainerService.HintSize="738,7516" sap2010:WorkflowViewState.IdRef="Sequence_Main">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="imapServer" />
       <Variable x:TypeArguments="x:Int32" Name="imapPort" />
@@ -429,7 +429,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log - Route Ke Excel" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[currentFile + &quot; -&gt; akan diproses via Read Range Excel (data tabular)&quot;]" />
+                          <ui:LogMessage DisplayName="Log - Route Ke Excel" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[currentFile + &quot; -&gt; akan diproses dari Read Range Excel (data tabular)&quot;]" />
                           <ui:ReadRange AddHeaders="True" DataTable="[resultExcel]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="486.4,226.4" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Invoice Batch" WorkbookPathResource="[LocalResource.FromPath(currentFile)]">
                             <ui:ReadRange.Range>
                               <InArgument x:TypeArguments="x:String">
